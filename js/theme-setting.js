@@ -6,11 +6,7 @@ function isNightFun() {
 
     // 第一次进来判断是白天还是晚上
     if (isNightTemp == null || isNightTemp == undefined) {
-        if (isNightRange("19:00", "23:59") || isNightRange("00:00", "07:00")) {
-            isNightTemp = 'true';
-        } else {
-            isNightTemp = 'false';
-        }
+        isNightTemp = 'true';
         localStorage.setExpire("night", isNightTemp, expireTime1H);
     }
     return isNightTemp;
