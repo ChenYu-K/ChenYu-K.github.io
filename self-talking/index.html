@@ -91,45 +91,4 @@
             });
         });</script><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('eeccaadc8ba876b69c84','4c250bf612f26889b183b33b0176659deb6a4c34','ChenYu-K','ChenYu-K.github.io',false);})</script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
             loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
-        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
-            elements: "a",//代表点击链接就更新
-            selectors: [  //代表要更新的节点
-                ".section",
-                "title"
-            ],
-            cache: true,
-            cacheBust:false
-        })
-
-        function loadBusuanzi(){
-        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
-        }
-
-        function loadMathJax() { //加载mathjax
-            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
-                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
-                var math = document.getElementsByClassName("entry-content")[0];
-                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
-            });
-        };
-
-        // 开始 PJAX 执行的函数
-        document.addEventListener('pjax:send', function () {
-        });
-        
-        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
-        document.addEventListener('pjax:complete', function () {
-            $(".section").css({opacity:1});
-            if(true){
-                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('eeccaadc8ba876b69c84','4c250bf612f26889b183b33b0176659deb6a4c34','ChenYu-K','ChenYu-K.github.io',false);});
-            }
-            if(false){
-                loadMathJax();
-            }
-            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
-            loadBackTop();
-            loadBusuanzi();
-            if(typeof loadBanner == 'function'){
-                loadBanner();
-            }
-        });</script><script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script><script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script><script type="text/javascript" src="/js/src/snow.js"></script><canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas><script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script><script type="text/javascript" src="/js/fireworks.js"></script></body></html>
+        });</script></body></html>
