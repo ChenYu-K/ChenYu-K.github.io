@@ -1,8 +1,8 @@
 
 (function(){
-    var WINDOW_WIDTH = 250;
-    var WINDOW_HEIGHT = 25;
-    var RADIUS = 2; //球半径
+    var WINDOW_WIDTH = 80;
+    var WINDOW_HEIGHT = 10;
+    var RADIUS = 4; //球半径
     var NUMBER_GAP = 10; //数字之间的间隙
     var u=0.65; //碰撞能量损耗系数
     var context; //Canvas绘制上下文
@@ -277,6 +277,7 @@
     setInterval(function(){
         //清空整个Canvas，重新绘制内容
         context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+        // cxt.scale(0.8,0.8);
         drawDatetime(context);
     }, 50)
 })();
