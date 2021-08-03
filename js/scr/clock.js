@@ -1,7 +1,7 @@
 {/* <div style="">
   <canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
 </div> */}
-<script>
+
 (function(){
    var digit=
     [
@@ -144,18 +144,19 @@ var canvas = document.getElementById('canvas');
 if(canvas.getContext){
     var cxt = canvas.getContext('2d');
     //声明canvas的宽高
-    var H = 100,W = 700;
+    var H = 25,W = 250;
     canvas.height = H;
     canvas.width = W;
     cxt.fillStyle = '#f00';
-    cxt.fillRect(10,10,50,50);
+    cxt.fillRect(10,10,1501,1501);
 
     //存储时间数据
     var data = [];
     //存储运动的小球
     var balls = [];
     //设置粒子半径
-    var R = canvas.height/20-1;
+    // var R = canvas.height/20-1;
+    var R = 2; C = 0.4;
     (function(){
         var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
         //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
@@ -168,6 +169,7 @@ if(canvas.getContext){
             for(var j = 0; j < digit[num][i].length; j++){
                 if(digit[num][i][j] == 1){
                     cxt.beginPath();
+                    cxt.fillStyle = "#FFC0CB";
                     cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
                     cxt.closePath();
                     cxt.fill();
@@ -202,7 +204,7 @@ if(canvas.getContext){
             balls[i].stepY += balls[i].disY;
             balls[i].x += balls[i].stepX;
             balls[i].y += balls[i].stepY;
-            if(balls[i].x > W + R || balls[i].y > H + R){
+            if(balls[i].x > W + C || balls[i].y > H + C){
                 balls.splice(i,1);
                 i--;
             }
@@ -217,8 +219,8 @@ if(canvas.getContext){
             for(var j = 0; j < digit[num][i].length; j++){
                 if(digit[num][i][j] == 1){
                     var ball = {
-                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
-                        y:i*2*(R+1)+(R+1),
+                        x:14*(C+2)*index + j*2*(C+1)+(C+1),
+                        y:i*2*(C+1)+(C+1),
                         stepX:Math.floor(Math.random() * 4 -2),
                         stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
                         color:colorArray[Math.floor(Math.random()*colorArray.length)],
@@ -233,7 +235,9 @@ if(canvas.getContext){
     /*渲染*/
     function render(){
         //重置画布宽度，达到清空画布的效果
-        canvas.height = 100;
+        canvas.height = H;
+        canvas.width = W;
+        cxt.scale(0.4,0.4);
         //渲染时钟
         for(var i = 0; i < data.length; i++){
             renderDigit(i,data[i]);
@@ -241,7 +245,7 @@ if(canvas.getContext){
         //渲染小球
         for(var i = 0; i < balls.length; i++){
             cxt.beginPath();
-            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.arc(balls[i].x,balls[i].y,C,0,2*Math.PI);
             cxt.fillStyle = balls[i].color;
             cxt.closePath();
             cxt.fill();
@@ -258,6 +262,4 @@ if(canvas.getContext){
         render();
     },50);
 }
-
 })();
-</script>
