@@ -12071,13 +12071,13 @@ hr {
 .night .fa-envelope,
 .night input,
 .night img {
-  filter: brightness(0.6) !important;
+  filter: brightness(1) !important;
 }
 .night figure {
-  filter: brightness(0.7) !important;
+  filter: brightness(1) !important;
 }
 .night strong {
-  filter: brightness(0.8) !important;
+  filter: brightness(1) !important;
 }
 .night .content blockquote {
   border-left: 3px solid #1e4584;
@@ -12135,13 +12135,13 @@ hr {
   color: unset;
 }
 .night .g-ads-x {
-  filter: brightness(0.6) !important;
+  filter: brightness(0.9) !important;
 }
 .night .g-ads-y {
-  filter: brightness(0.6) !important;
+  filter: brightness(0.9) !important;
 }
 .night .google-auto-placed {
-  filter: brightness(0.6) !important;
+  filter: brightness(0.9) !important;
 }
 .night .pagination-previous,
 .night .pagination-next,
@@ -12181,7 +12181,7 @@ hr {
   filter: unset !important;
 }
 .night #index_hot_div .item {
-  filter: brightness(0.6) !important;
+  filter: brightness(1) !important;
 }
 .night .gt-container .gt-meta {
   border-bottom: 2px solid #989898;
@@ -12203,7 +12203,7 @@ hr {
 .night .g-ads-x,
 .night .g-ads-y,
 .night .google-auto-placed {
-  filter: brightness(0.6) !important;
+  filter: brightness(1) !important;
 }
 .night .index-category-tag .button.is-small {
   color: #c0c0c0;
