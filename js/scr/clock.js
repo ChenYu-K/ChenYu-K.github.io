@@ -144,7 +144,7 @@ var canvas = document.getElementById('canvas');
 if(canvas.getContext){
     var cxt = canvas.getContext('2d');
     //声明canvas的宽高
-    var H = 25,W = 250;
+    var H = 40,W = 250;
     canvas.height = H;
     canvas.width = W;
     cxt.fillStyle = '#f00';
@@ -156,7 +156,7 @@ if(canvas.getContext){
     var balls = [];
     //设置粒子半径
     // var R = canvas.height/20-1;
-    var R = 2; C = 0.4;
+    var R = 1; C = 1;
     (function(){
         var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
         //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
@@ -237,7 +237,7 @@ if(canvas.getContext){
         //重置画布宽度，达到清空画布的效果
         canvas.height = H;
         canvas.width = W;
-        cxt.scale(0.4,0.4);
+        // cxt.scale(0.5,0.5);
         //渲染时钟
         for(var i = 0; i < data.length; i++){
             renderDigit(i,data[i]);
