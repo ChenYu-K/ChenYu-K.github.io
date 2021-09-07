@@ -12269,7 +12269,9 @@ textarea {
   font-family: 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 body {
-  background: url("/img/Pattern-Randomized.svg");
+  background: url("https://cdn.jsdelivr.net/gh/ChenYu-K/ChenYu-K.github.io@master/img/backgroud.jpg");
+  background-attachment: fixed;
+  background-size: 100%;
 }
 .img-x {
   position: relative;
