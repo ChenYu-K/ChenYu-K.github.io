@@ -6,7 +6,7 @@
   <link href="https://www.chenyu-k.com/atom.xml" rel="self"/>
   
   <link href="https://www.chenyu-k.com/"/>
-  <updated>2021-10-28T08:10:51.846Z</updated>
+  <updated>2021-11-12T12:01:39.003Z</updated>
   <id>https://www.chenyu-k.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Centos 7.X use yum to install-php5.6.X</title>
+    <link href="https://www.chenyu-k.com/2021/11/12/install-php5-6-X/"/>
+    <id>https://www.chenyu-k.com/2021/11/12/install-php5-6-X/</id>
+    <published>2021-11-12T11:55:07.000Z</published>
+    <updated>2021-11-12T12:01:39.003Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>Check now php package</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list installed | grep php</span><br></pre></td></tr></table></figure></li><li><p>if there have any php, deleate it first.</p></li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove php.x86_64 php-cli.x86_64 php-common.x86_64 php-gd.x86_64 php-ldap.x86_64 php-mbstring.x86_64 php-mcrypt.x86_64 php-mysql.x86_64 php-pdo.x86_64 </span><br></pre></td></tr></table></figure><ol start="3"><li><p>Configure EPEL source</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install -y epel-release</span><br><span class="line">wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo</span><br></pre></td></tr></table></figure></li><li><p>Configure remi source</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm</span><br></pre></td></tr></table></figure></li><li><p>Install php5.6.x</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install --enablerepo=remi --enablerepo=remi-php56 php php-opcache php-devel php-mbstring php-mcrypt php-mysqlnd php-phpunit-PHPUnit php-pecl-xdebug php-pecl-xhprof</span><br></pre></td></tr></table></figure></li><li><p>install php-fpm</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install --enablerepo=remi --enablerepo=remi-php56 php-fpm </span><br></pre></td></tr></table></figure></li><li><p>Configure boot service</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart php-fpm</span><br><span class="line">systemctl enable php-frm</span><br></pre></td></tr></table></figure></li><li><p>Check if the installation is successful</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep php</span><br><span class="line">netstat -anp | grep 9000</span><br></pre></td></tr></table></figure></li><li><p>restar service</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart httpd</span><br><span class="line">sudo systemctl restart php-fpm</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Check now php package&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>win11拖拽BUG解决方案</title>
