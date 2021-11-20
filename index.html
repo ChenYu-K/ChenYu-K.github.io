@@ -24,75 +24,7 @@
                 r=o.createElement('script');r.async=1;
                 r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
                 a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');</script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/ChenYu-K/ChenYu-K.github.io@master/img/logo.svg" alt="ChenYu-K" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/album">Album</a><a class="navbar-item" href="/about">About</a><a class="navbar-item" href="/friend">Friend</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/ChenYu-K/community#"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="My GitHub" href="https://github.com/ChenYu-K"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-11-20  <a class="commentCountImg" href="/2021/11/20/abaqus/#comment-container"><span class="display-none-class">/2021/11/20/abaqus/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="51742d4e0fa41cd3776f5447238fbeb1">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>3 m  <i class="fas fa-pencil-alt"> </i>0.4 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/20/abaqus/">如何使用CUDA对abaqus进行加速</a></h1><div class="content"><p>本文介绍了如何使用 <a target="_blank" rel="noopener" href="https://developer.nvidia.com/zh-cn/cuda-toolkit">Nvidia CUDA</a><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>的加速功能,使Abaqus计算加速。</p>
-<h2 id="安装显卡"><a href="#安装显卡" class="headerlink" title="安装显卡"></a>安装显卡</h2><p>提前查询好主板是否与显卡兼容，在购买显卡。<br>本次使用的是Nvidia 2021 新推出的 RTXA4000显卡。</p>
-<table>
-<thead>
-<tr>
-<th>GPU特性</th>
-<th>RTX A000</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>GPU显存</td>
-<td>带纠错码ECC DDR6 16GB</td>
-</tr>
-<tr>
-<td>显存带宽</td>
-<td>448GB/s</td>
-</tr>
-<tr>
-<td>图形总线</td>
-<td>PCI-E X16</td>
-</tr>
-<tr>
-<td>CUDA核心数</td>
-<td>6144</td>
-</tr>
-<tr>
-<td>单精度浮点计算</td>
-<td>19.2 TFLOPS</td>
-</tr>
-</tbody></table>
-<p>*具体可参考 <a target="_blank" rel="noopener" href="https://www.nvidia.cn/content/dam/en-zz/Solutions/gtcs21/rtx-a4000/nvidia-rtx-a4000-datasheet.pdf">A4000规格书</a></p>
-<ol>
-<li>插入卡槽</li>
-<li>连接显卡电源（6Pin）</li>
-<li>开机测试</li>
-</ol>
-<h2 id="安装显卡驱动"><a href="#安装显卡驱动" class="headerlink" title="安装显卡驱动"></a>安装显卡驱动</h2><p>在<a target="_blank" rel="noopener" href="https://www.nvidia.co.jp/Download/index.aspx?lang=jp">Nvida显卡驱动官网</a>找到合适自己的显卡驱动下载，并重启。<br><img src="https://i.imgur.com/ylSk04C.png"></p>
-<h2 id="安装CUDA-工具"><a href="#安装CUDA-工具" class="headerlink" title="安装CUDA 工具"></a>安装CUDA 工具</h2><p><a target="_blank" rel="noopener" href="https://developer.nvidia.com/zh-cn/cuda-toolkit">CUDA工具包安装地址</a></p>
-<p><img src="https://i.imgur.com/KgAsN7K.png"></p>
-<p>CUDA的安装需要较长时间，属于正常情况。</p>
-<h2 id="环境变量设置"><a href="#环境变量设置" class="headerlink" title="环境变量设置"></a>环境变量设置</h2><p>在这里有两种方法可以开启CUDA的加速，</p>
-<ol>
-<li>直接编辑系统环境变量，如下图<br>在系统全局变量里加入</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>环境变量</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>变量名</td>
-<td><code>ABA_ACCELERATOR_TYPE</code></td>
-</tr>
-<tr>
-<td>值</td>
-<td><code>PLATFORM_CUDA</code></td>
-</tr>
-</tbody></table>
-<p><img src="https://i.imgur.com/xEUpwAm.png"></p>
-<ol start="2">
-<li>编辑<code>abaqus_v6.env</code><br>在<code>abaqus_v6.env</code>文件的句末加上<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">os.environ[&quot;ABA_ACCELERATOR_TYPE&quot;]=&quot;PLATFORM_CUDA&quot; # Nvidia</span><br></pre></td></tr></table></figure>
-的字段使其可以使用CUDA加速工具加速ABAQUS。  </li>
-</ol>
-<p>** <code>abaqus_v6.env</code>的路径一般是在<code>C:\SIMULIA\EstProducts\2020\win_b64\SMA\site</code>这里。</p>
-<p><img src="https://i.imgur.com/6Ui3AIK.png"></p>
-<h2 id="是否加速成功"><a href="#是否加速成功" class="headerlink" title="是否加速成功"></a>是否加速成功</h2><p>成功加速Abaqus反馈的Log里面会出现如下加速成功的字符。<br><img src="https://i.imgur.com/WZRgoEt.png"></p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">Nvidia Cuda 加速</span><a href="#fnref:1" rev="footnote"> ↩</a></li></ol></div></div></div><div class="index-category-tag">  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/ABAQUS/">ABAQUS</a></div><hr></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-11-15  <a class="commentCountImg" href="/2021/11/15/centos-7-update-php5-to-php7-2/#comment-container"><span class="display-none-class">/2021/11/15/centos-7-update-php5-to-php7-2/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="da68ad1c93c89d1072f3a56ba91b43a9">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>a minute  <i class="fas fa-pencil-alt"> </i>0.2 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/15/centos-7-update-php5-to-php7-2/">Centos7 update php5 to php7.2</a></h1><div class="content"><p>In order to update to the recommended php version for wordpress,i update the original php 5.4 to php 7.2.</p>
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');</script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/ChenYu-K/ChenYu-K.github.io@master/img/logo.svg" alt="ChenYu-K" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/album">Album</a><a class="navbar-item" href="/about">About</a><a class="navbar-item" href="/friend">Friend</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/ChenYu-K/community#"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="My GitHub" href="https://github.com/ChenYu-K"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-11-20  <a class="commentCountImg" href="/2021/11/20/abaqus/#comment-container"><span class="display-none-class">/2021/11/20/abaqus/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="51742d4e0fa41cd3776f5447238fbeb1">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>3 m  <i class="fas fa-pencil-alt"> </i>0.5 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/20/abaqus/">如何使用CUDA对abaqus进行加速</a></h1><div class="content"><p>本文介绍了如何使用 <a target="_blank" rel="noopener" href="https://developer.nvidia.com/zh-cn/cuda-toolkit">Nvidia CUDA</a><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>的加速功能,使Abaqus计算加速。</p></div><div class="index-category-tag">  <div class="level-item"><i class="fas fa-tags has-text-grey"> </i><a class="article-more button is-small link-muted index-tags" href="/tags/ABAQUS/">ABAQUS</a></div><hr></div><div class="level is-mobile is-flex"><div class="level-start"><div class="level-item"><a class="article-more button is-small size-small" href="/2021/11/20/abaqus/#more">Read more&gt;&gt;</a></div></div><div class="level-start"><div class="level-item has-text-grey is-size-7"><time datetime="2021-11-20T08:05:36.870Z"><i class="far fa-calendar-check"> Last Modified: </i>2021-11-20</time></div></div></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-11-15  <a class="commentCountImg" href="/2021/11/15/centos-7-update-php5-to-php7-2/#comment-container"><span class="display-none-class">/2021/11/15/centos-7-update-php5-to-php7-2/</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="da68ad1c93c89d1072f3a56ba91b43a9">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>a minute  <i class="fas fa-pencil-alt"> </i>0.2 k</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/11/15/centos-7-update-php5-to-php7-2/">Centos7 update php5 to php7.2</a></h1><div class="content"><p>In order to update to the recommended php version for wordpress,i update the original php 5.4 to php 7.2.</p>
 <ul>
 <li><p>check the list of installable php versions in yum.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum provides php</span></span><br></pre></td></tr></table></figure></li>
