@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.chenyu-k.com/2021/08/24/2021-08-24-Material-test/</loc>
+    
+    <lastmod>2021-11-24</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.chenyu-k.com/about/index.html</loc>
     
     <lastmod>2021-11-22</lastmod>
@@ -9,28 +16,28 @@
   </url>
   
   <url>
-    <loc>https://www.chenyu-k.com/2021/11/20/use-cuda-in-abaqus/</loc>
+    <loc>https://www.chenyu-k.com/2021/11/20/2021-11-20-use-cuda-in-abaqus/</loc>
     
     <lastmod>2021-11-20</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.chenyu-k.com/2021/11/15/centos-7-update-php5-to-php7-2/</loc>
+    <loc>https://www.chenyu-k.com/2021/11/15/2021-11-15-centos-7-update-php5-to-php7-2/</loc>
     
     <lastmod>2021-11-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.chenyu-k.com/2021/11/12/install-php5-6-X/</loc>
+    <loc>https://www.chenyu-k.com/2021/11/12/2021-11-12-install-php5-6-X/</loc>
     
     <lastmod>2021-11-15</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.chenyu-k.com/2021/10/28/win11-bug/</loc>
+    <loc>https://www.chenyu-k.com/2021/10/28/2021-10-28-win11-bug/</loc>
     
     <lastmod>2021-10-28</lastmod>
     
@@ -51,13 +58,6 @@
   </url>
   
   <url>
-    <loc>https://www.chenyu-k.com/2021/08/24/2021-08-24-Material-test/</loc>
-    
-    <lastmod>2021-08-25</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.chenyu-k.com/lang/material-test/index.html</loc>
     
     <lastmod>2021-08-25</lastmod>
@@ -72,7 +72,7 @@
   </url>
   
   <url>
-    <loc>https://www.chenyu-k.com/2021/09/03/hello-world/</loc>
+    <loc>https://www.chenyu-k.com/2021/07/31/hello-world/</loc>
     
     <lastmod>2021-08-12</lastmod>
     
@@ -130,71 +130,71 @@
 
   <url>
     <loc>https://www.chenyu-k.com/</loc>
-    <lastmod>2021-11-22</lastmod>
+    <lastmod>2021-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://www.chenyu-k.com/tags/Latex/</loc>
-    <lastmod>2021-11-22</lastmod>
+    <loc>https://www.chenyu-k.com/tags/Abaqus/</loc>
+    <lastmod>2021-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.chenyu-k.com/tags/Abaqus/</loc>
-    <lastmod>2021-11-22</lastmod>
+    <loc>https://www.chenyu-k.com/tags/Latex/</loc>
+    <lastmod>2021-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.chenyu-k.com/tags/Python/</loc>
-    <lastmod>2021-11-22</lastmod>
+    <lastmod>2021-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.chenyu-k.com/tags/Matlab/</loc>
-    <lastmod>2021-11-22</lastmod>
+    <lastmod>2021-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.chenyu-k.com/tags/Data-processing/</loc>
-    <lastmod>2021-11-22</lastmod>
+    <lastmod>2021-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.chenyu-k.com/tags/Tips/</loc>
-    <lastmod>2021-11-22</lastmod>
+    <lastmod>2021-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.chenyu-k.com/tags/system/</loc>
-    <lastmod>2021-11-22</lastmod>
+    <lastmod>2021-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.chenyu-k.com/tags/linux/</loc>
-    <lastmod>2021-11-22</lastmod>
+    <lastmod>2021-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.chenyu-k.com/tags/ABAQUS/</loc>
-    <lastmod>2021-11-22</lastmod>
+    <lastmod>2021-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -202,36 +202,36 @@
 
   
   <url>
-    <loc>https://www.chenyu-k.com/categories/Latex/</loc>
-    <lastmod>2021-11-22</lastmod>
+    <loc>https://www.chenyu-k.com/categories/Abaqus/</loc>
+    <lastmod>2021-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.chenyu-k.com/categories/Abaqus/</loc>
-    <lastmod>2021-11-22</lastmod>
+    <loc>https://www.chenyu-k.com/categories/Latex/</loc>
+    <lastmod>2021-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.chenyu-k.com/categories/Python/</loc>
-    <lastmod>2021-11-22</lastmod>
+    <lastmod>2021-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.chenyu-k.com/categories/Other/</loc>
-    <lastmod>2021-11-22</lastmod>
+    <lastmod>2021-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.chenyu-k.com/categories/computer-science/</loc>
-    <lastmod>2021-11-22</lastmod>
+    <lastmod>2021-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
